@@ -35,7 +35,7 @@ usermod -g 100 nobody && \
 usermod -d /home nobody && \
 chown -R nobody:users /home
 
-ADD hosts /config/hosts
+ADD hosts /defaults/hosts
 ADD firstrun.sh /etc/my_init.d/firstrun.sh
 ADD services/ /etc/service/
 ADD defaults/ /defaults/
@@ -51,6 +51,4 @@ cp /defaults/lerotate /etc/logrotate.d/letsencrypt && \
 crontab /defaults/letsencryptcron.conf && \
 update-rc.d -f nginx remove && \
 update-rc.d -f php5-fpm remove && \
-update-rc.d -f fail2ban remove && \\
-cat /config/hosts >> /etc/hosts && \\
-service nginx restart
+update-rc.d -f fail2ban remove
