@@ -51,5 +51,5 @@ cp /defaults/lerotate /etc/logrotate.d/letsencrypt && \
 crontab /defaults/letsencryptcron.conf && \
 update-rc.d -f nginx remove && \
 update-rc.d -f php5-fpm remove && \
-update-rc.d -f fail2ban remove
+update-rc.d -f fail2ban remove && \\
 cat /config/hosts >> /etc/hosts
