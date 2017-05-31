@@ -35,7 +35,6 @@ usermod -g 100 nobody && \
 usermod -d /home nobody && \
 chown -R nobody:users /home
 
-ADD hosts /defaults/hosts
 ADD firstrun.sh /etc/my_init.d/firstrun.sh
 ADD services/ /etc/service/
 ADD defaults/ /defaults/
