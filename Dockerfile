@@ -39,7 +39,6 @@ ADD firstrun.sh /etc/my_init.d/firstrun.sh
 ADD services/ /etc/service/
 ADD defaults/ /defaults/
 ADD https://dl.eff.org/certbot-auto /defaults/certbot-auto
-ADD customhosts /defaults/customhosts
 
 RUN chmod +x /etc/my_init.d/firstrun.sh && \
 chmod +x /defaults/letsencrypt.sh && \
