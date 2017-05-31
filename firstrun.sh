@@ -143,7 +143,7 @@ else
 fi
 
 service php5-fpm start
-cat /defaults/customHosts >> /etc/hosts
+cat /defaults/customhosts >> /etc/hosts
 service nginx start
 if [ -S "/var/run/fail2ban/fail2ban.sock" ]; then
   echo "fail2ban.sock found, deleting"
